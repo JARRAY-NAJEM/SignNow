@@ -1,0 +1,154 @@
+
+<div style="height: 50px;"></div>
+<mat-card style=" text-align:center ;margin-right: -15px; ">
+<div style="height: 20px;"></div>
+
+
+
+
+
+
+
+
+
+      <div class="mapouter"><div class="gmap_canvas">
+        <iframe height="250px" width="97.5%"
+         src="https://maps.google.com/maps?q=ETC%20Tunisie%20Av.%20Beit%20El%20Hikma,%20Kairouan%203131&t=&z=19&ie=UTF8&iwloc=&output=embed"  ></iframe>
+
+        </div></div>
+
+
+      <div  >
+
+        <div style="height: 20px;"></div>
+
+        <div style="text-align: center;" >
+
+          <form    [formGroup]="myFormSupport"  >
+
+
+            <div style="text-align:center ;" >
+                <div class="form-outline "  fxFlex="50">
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>nom</mat-label>
+                    <input type="text" matInput formControlName="nom" placeholder="aA zZ 123 @#">
+                    <mat-icon matSuffix>person</mat-icon>
+                    <!-- <mat-error *ngIf="myFormRegister.get('nom ').hasError ">
+                      nom n'est pas <strong>Valide</strong>
+                    </mat-error> -->
+                    <mat-error *ngIf="myFormSupport.get('nom').hasError('required')"><b>required</b></mat-error>
+
+
+
+
+                  </mat-form-field>
+                </div>
+
+
+                <div  class="form-outline  "fxFlex="80"  >
+                  <mat-form-field class="example-full-width" appearance="outline">
+                 <mat-label>Email</mat-label>
+                 <input type="email" matInput formControlName="email" placeholder="email">
+                 <mat-icon matSuffix>mail</mat-icon>
+                 <!-- <mat-error *ngIf="myForm.get('email ').hasError('email') && !myForm.get('email ').hasError('required')">
+                   Please enter a valid email address
+                 </mat-error>
+                 <mat-error *ngIf="myForm.get('email ').hasError('required')">
+                   Email is <strong>required</strong>
+                 </mat-error> -->
+
+               </mat-form-field>
+
+                 </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <div  >
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>sujet</mat-label>
+                <mat-select formControlName="Sujet" >
+                  <mat-option value="one">demande technique</mat-option>
+                  <mat-option value="two">demande comerciale</mat-option>
+                  <mat-option value="two">autre</mat-option>
+                </mat-select>
+
+               </mat-form-field>
+            </div>
+
+
+
+            <div >
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Message</mat-label>
+                <textarea matInput formControlName="msg"  ></textarea>
+                <mat-error *ngIf="myFormSupport.get('msg').hasError('required')"><b>required</b></mat-error>
+
+              </mat-form-field>
+
+            </div>
+
+
+
+
+            <button mat-button [disabled]="myFormSupport.invalid"  class="btn-support" type="button">Envoyer Message</button><br>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </mat-card>
+  <div style="height: 50px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+
+
+<div fxLayout="column" fxLayoutAlign="space-between center"
+  style="background-color: white;">
+  <mat-toolbar fxLayout="row" fxLayoutAlign="space-around center" fxFlex="100"
+    class="tool">
+    <a routerLink="">
+      <img src="./../assets/logo.png" alt="" height="50px">
+    </a>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+
+      <!-- <button   mat-button style="font-size: 110%;"mat-button >Application</button> -->
+      <button class="btn-tool" mat-button style="font-size: 75%;"
+        [matMenuTriggerFor]="menu">Services <mat-icon>arrow_drop_down</mat-icon></button>
+      <mat-menu #menu="matMenu">
+        <button class="btn-tool" mat-menu-item routerLink="application">Application</button>
+        <button class="btn-tool" mat-menu-item routerLink="serveur">Serveur</button>
+      </mat-menu>
+
+      <button class="btn-tool" mat-button style="font-size: 75%;" mat-button
+        routerLink="tarifs">Trafis</button>
+
+
+
+      <button class="btn-conx"
+        mat-button routerLink="/authentification/login"><span>Se connecter</span></button>
+    </div>
+
+  </mat-toolbar>
+
+
+
+</div>
+<!-- <style>
+
+
+@media only screen and (max-width: 700px) {
+  .tool  {
+    font-size: 10px;
+    color: brown;
+    height: 10%;
+
+
+  }
+  img{
+    height: 20px;
+  }
+
+
+}
+  </style> -->

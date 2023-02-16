@@ -1,0 +1,61 @@
+<div fxLayout="row" fxLayoutAlign="start center" style="font-size: x-large;font-family: monospace;" >
+  <div></div>
+  <div class="button-85"><mat-icon>history</mat-icon></div>
+  &nbsp;&nbsp;
+  <div style="font-size:x-large ;">Historique</div>
+
+  </div>
+
+
+
+  <div fxLayoutAlign="end center">
+
+
+
+  <mat-form-field appearance="standard"   >
+    <mat-label>rechercher</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input >
+    <mat-icon matSuffix    >search</mat-icon>
+
+  </mat-form-field>
+
+</div>
+<div class="mat-elevation-z2">
+  <table mat-table [dataSource]="dataSource" style="text-align: center;">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+    </ng-container>
+        <!-- Position Column -->
+        <!-- <ng-container matColumnDef="password">
+        <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Mot de Pass </th>
+        <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+      </ng-container> -->
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="loginDate">
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Date de connexion </th>
+      <td mat-cell *matCellDef="let element"> {{element.loginDate}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="logoutdate"  >
+      <th mat-header-cell *matHeaderCellDef style="text-align: center;">  Date de déconnection </th>
+      <td mat-cell *matCellDef="let element"> {{element.logoutdate}} </td>
+    </ng-container>
+
+
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</div>
+
+  <mat-paginator [pageSizeOptions]="[5,10]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>

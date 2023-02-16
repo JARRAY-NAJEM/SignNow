@@ -1,0 +1,18 @@
+
+        .btn-Change{
+          width: 100%;
+          background-color: #fc0;
+          color: rgb(255, 255, 255);
+          border-radius: 5px;
+          text-align: center;
+          font-family: monospace;
+          font-weight: bold;
+          border-color: transparent;
+          padding: 5px;
+          font-size: 20px;
+          transition-duration: 0.2s;
+         padding-bottom: -10px;
+         cursor: pointer;
+  }
+
+

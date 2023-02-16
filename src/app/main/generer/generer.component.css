@@ -1,0 +1,36 @@
+
+  .btn-achat{
+    width: 100%;
+    background: #fc0;
+    color: #000;
+
+
+    outline: none;
+
+
+    border-radius: 5px;
+
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+
+
+
+    font-size: 20px;
+
+
+    padding-bottom: -10px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+
+   }
+   .btn-achat:hover{
+    color: #fff;
+   }
+   *{
+    font-family: monospace;
+   }
+
+
+

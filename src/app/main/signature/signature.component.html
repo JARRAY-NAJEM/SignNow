@@ -1,0 +1,87 @@
+<div style="height: 50px;" ></div>
+<!-- 1ere interface -->
+<mat-card   *ngIf="!click" style=" text-align:center ; ">
+
+
+
+
+<div >
+  <div style="height: 20px;"></div>
+
+  <h1 style="font-weight:500 ; font-family: monospace ; font-size: 40px;">Signature manuscrite</h1>
+<div style="height: 30px;"></div>
+<div style="margin-left: 43%;">
+
+<div style="background-color:transparent ;border: 2px solid #000  ;width: 200px;height: 200px;text-align: center; ">
+
+ <img   src='{{ signatureImg }}' width="100%" height="100%"/>
+
+</div>
+
+</div>
+
+
+<div style="height: 30px;"></div>
+</div>
+<button mat-button class="btn-maj" (click)="click = !click  " *ngIf="!click"> Mettre à jour</button>
+<div style="height: 30px;"></div>
+</mat-card>
+<!--2 eme interface -->
+<mat-card style=" text-align:center ; " *ngIf="click" >
+<div  >
+  <p style="font-weight:bold ;font-size:15px ;">Veuillez dessiner votre signature manuscrite par défaut.</p>
+  <div style="   margin-bottom: 10px;border: 1px solid; width: 525px;height: 375; margin-left: 25%;">
+  <div class="signature-container">
+    <signature-pad style="width:250px ;"  [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+  </div>
+</div>
+
+<!--  -->
+<form style="text-align: center;"  >
+<div  >
+<button mat-button class="btn-effacer" (click)="clearSignature()">Effacer</button>
+  <div class="buttons" >
+
+
+  </div>
+</div>
+
+
+
+
+<!--  -->
+<div style="text-align:center ;" *ngIf="click" >
+  <div class="form-outline "   >
+    <div  fxLayout="row"    >
+      <button mat-button class="btn-cancel"   fxFlex="40"   (click)="click = !click" >cancel</button>
+      <button mat-button class="btn-save"   fxFlex="40"    (click)="click = !click" (click)="savePad()">Sauvegarder</button>
+
+     <div    class="form-outline  "  >
+
+    </div></div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+</form>
+<!--  -->
+  <!-- <div class="signature-image" *ngIf="signatureImg">
+    <img src='{{ signatureImg }}' width="100px" height="100px"/>
+  </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+  </mat-card>

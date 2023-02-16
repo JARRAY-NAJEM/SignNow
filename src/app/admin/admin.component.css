@@ -1,0 +1,44 @@
+
+.btn-dash {
+  padding: auto;
+
+  width: 99%;
+  height: 66px;
+
+  cursor: pointer;
+  color: gray;
+  font-size: x-large;
+  font-weight: bolder;
+
+  border-radius: 0px;
+}
+.btn-dash:focus {
+  color: #fff;
+  background-color: #000;
+
+  font-weight: bold;
+  letter-spacing: .5px;
+
+
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+p.example-app-name {
+  margin-left: 15px;
+
+  z-index: 1 auto;
+}
+
+
+

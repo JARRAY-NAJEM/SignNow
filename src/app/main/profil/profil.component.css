@@ -1,0 +1,53 @@
+
+  .btn-maj {
+    width: 100%;
+    background: #fc0;
+
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: -10px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+  }
+  .btn-x{
+
+    background:             #5d5d5d;
+    color:#fc0;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: -10px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    margin-left: 5%;
+
+
+
+
+}
+.btn-s{
+
+
+  background: #fc0;
+
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: -10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-left: 10%;
+
+
+
+}

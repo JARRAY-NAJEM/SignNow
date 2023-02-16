@@ -1,0 +1,86 @@
+
+
+
+
+
+<div>
+  <div fxFlex="30"></div>
+  <div style="text-align: center;"fxFlex="40">
+
+
+
+<a routerLink="/">
+    <img src="../../assets/lg.png" alt="" style="width: 55%; height:50%;"></a>
+    <div style="height:10px;"></div>
+
+
+
+
+    <form [formGroup]="myFormlogin" class="example-form">
+
+
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="Email"
+            placeholder="email">
+          <mat-icon matSuffix>mail</mat-icon>
+
+          <mat-error *ngIf="myFormlogin.get('Email').hasError('required')"><b>*
+              required</b></mat-error>
+          <mat-error *ngIf="myFormlogin.get('Email').hasError('Email')">* votre
+            Email n'est pas <b>valide</b></mat-error>
+
+
+        </mat-form-field>
+
+      </div>
+
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input [type]="hide ? 'password' : 'text'" matInput
+            formControlName="password" placeholder="password" >
+          <button mat-icon-button matSuffix (click)="hide= !hide"
+            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+          <!-- <mat-error *ngIf="myFormlogin.get('password').hasError('required')"><b>*
+              Veuillez saisir votre nouveau mot de passe</b></mat-error> -->
+        </mat-form-field>
+      </div>
+      <div style="height: 15px;"></div>
+
+      <div>
+        <!--   -->
+        <button (click)="logGuard()" mat-raised-button class="btn-log"[disabled]="myFormlogin.invalid"
+          routerLink="/main">S'authentifier</button><br>
+        <div style="height: 10px;"></div>
+        <a class="a">Mot de pass oublié ?</a>
+        <div style="height: 15px;"></div>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <p>Vous n'avez pas de compte ?</p>
+
+        <button mat-button class="btn-btn"type="submit"
+          routerLink="/authentification/register">Cliquez ici</button>
+      </div>
+
+    </form>
+
+  </div>
+  <div fxFlex="30"></div>
+
+
+
+
+
+
+
+
+
+</div>

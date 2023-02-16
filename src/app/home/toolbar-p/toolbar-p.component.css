@@ -1,0 +1,53 @@
+
+.tool{
+
+
+  position: fixed;
+  overflow: hidden;
+  background-color: white ;
+  height: 7.5%;
+
+
+
+
+
+
+  z-index: 1;
+
+
+
+
+
+  }
+
+
+
+
+  .btn-tool:hover
+{
+  background-color: #fc0;
+  color: #fff;
+
+}
+
+.button span {
+  cursor: pointer;
+
+
+  transition: 1s;
+}
+
+
+
+
+
+.btn-conx{
+
+  background-color: #fc0;border-radius: 15px;font-size: 75%;margin-left: 3%; text-align: center;
+}
+.btn-conx:hover{
+  color: #fc0;
+  background-color: black;
+
+}
+

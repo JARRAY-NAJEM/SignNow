@@ -1,0 +1,168 @@
+<div
+  fxLayout="row"
+  fxLayoutAlign="start center"
+  style="font-size: x-large; font-family: monospace"
+>
+  <div class="button-85">
+    <mat-icon style="background-color: black;">dashboard</mat-icon>
+  </div>
+  &nbsp;&nbsp;
+  <div style="font-size: large">Dashboard</div>
+</div>
+<div style="height: 25px"></div>
+<div fxLayout="row"></div>
+
+<div fxLayout="row" fxLayoutAlign="space-evenly center">
+  <mat-card fxFlex="30" class="example-card" style="background-color: #fa9297;">
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" >
+
+      <div fxLayout="row"fxLayoutAlign="space-between center"  >
+        <div fxFlex="100"  ></div>
+        <div  style=" text-align: end;">
+
+          <div>
+            <div style="text-align: end">
+              <div></div>
+              <button
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div >
+      <div fxLayout="row"  fxLayoutAlign="start center">
+      <div fxFlex="45"   ><mat-icon style="font-size:100px;">person</mat-icon></div>
+      <div fxLayout="column" fxFlex="50">
+      <div fxFlex="40"   ><p>{{userNumber}}</p></div>
+      <div style="height: 15px;"></div>
+      <div fxFlex="40"  ><p>Utilisateurs</p></div>
+  </div>
+  </div>
+
+    </div>
+  </mat-card>
+
+  <mat-card fxFlex="30" class="example-card" style="background-color:#5cc9e7 ;">
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" >
+
+      <div fxLayout="row"fxLayoutAlign="space-between center"  >
+        <div fxFlex="100"  ></div>
+        <div  style=" text-align: end;">
+
+          <div>
+            <div style="text-align: end">
+              <button
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu"
+              >
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div >
+      <div fxLayout="row"  fxLayoutAlign="start center">
+      <div fxFlex="45"   ><mat-icon style="font-size:100px;">account_balance_wallet</mat-icon></div>
+      <div fxLayout="column" fxFlex="50">
+      <div fxFlex="40"    ><p>{{priceTotal}}.000</p></div>
+      <div style="height: 15px;"></div>
+      <div fxFlex="40"    ><p>TND</p></div>
+  </div>
+  </div>
+
+    </div>
+  </mat-card>
+
+
+  <mat-card fxFlex="30" class="example-card" style="background-color: #ceeb5a">
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" >
+
+      <div fxLayout="row"fxLayoutAlign="space-between center"  >
+        <div fxFlex="100"  ></div>
+        <div  style=" text-align: end;">
+
+          <div>
+            <div style="text-align: end">
+              <button
+                mat-icon-button
+                [matMenuTriggerFor]="menu"
+                aria-label="Example icon-button with a menu"
+              >
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div >
+      <div fxLayout="row"  fxLayoutAlign="start center">
+      <div fxFlex="45"   ><mat-icon style="font-size:100px;">picture_as_pdf</mat-icon></div>
+      <div fxLayout="column" fxFlex="50">
+      <div fxFlex="40"    ><p>{{signatureNumber}}</p></div>
+      <div style="height: 15px;"></div>
+      <div fxFlex="40"     ><p>Signatures</p></div>
+  </div>
+  </div>
+
+    </div>
+  </mat-card>
+
+</div>
+
+
+
+

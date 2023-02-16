@@ -1,0 +1,54 @@
+
+<div class="example-container">
+
+
+  <mat-sidenav-container class="example-sidenav-container"  >
+    <mat-sidenav
+      #sidenav
+      style="min-width: 17%;  text-align: center;position:fixed ; background-color: #f2c80f; "
+      opened
+      mode="side"
+      [fixedInViewport]="mobileQuery.matches">
+      <div style="height: 2%;"></div>
+      <div style="height: 2%;"></div>
+
+      <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: xx-large; font-weight: bold;" >ADMIN</p>
+      <div style="height: 2%;"></div>
+      <div style="height: 2%;"></div>
+
+      <mat-nav-list fxLayout="column" fxLayoutAlign="space-between center" style="font-family: monospace; font-size: x-large;">
+        <button fxLayoutAlign="space-between center"  style="font-family: monospace;"  mat-button routerLink='dashboard' class="btn-dash"><mat-icon>dashboard</mat-icon>&nbsp; Dashboard</button>
+        <button fxLayoutAlign="space-between center"  style="font-family: monospace;" mat-button routerLink="Login" class="btn-dash"><mat-icon>history</mat-icon>&nbsp; Historique</button>
+
+        <button fxLayoutAlign="space-between center" style="font-family: monospace;"  mat-button routerLink="User" class="btn-dash"><mat-icon>person</mat-icon>&nbsp; Utilisateurs</button>
+        <button fxLayoutAlign="space-between center" style="font-family: monospace;"  mat-button routerLink="Role" class="btn-dash"><mat-icon>settings_brightness</mat-icon>&nbsp; Liste de Roles</button>
+
+
+        <div></div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="background-color:whitesmoke;">
+      <mat-toolbar
+      style="max-height: 7.5%; background-color: white; color: #000; position: fixed; z-index: 1;"
+    >
+      <div fxLayout="row" fxLayoutAlign="  center" fxFlex="100"  >
+        <button mat-button (click)="sidenav.toggle()" >
+          <mat-icon>clear_all</mat-icon>
+        </button>
+        <!-- <div style="color: #fc0; font-size: xx-large;font-family: monospace;" > Admin</div> -->
+
+      </div>
+    </mat-toolbar>
+    <div style="margin-top:5% ;margin-left: 1.5%;margin-right: 1.5%; ">
+      <div style="height: 25px;"></div>
+           <router-outlet></router-outlet>
+
+
+    </div>
+      <p>
+
+      </p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  </div>

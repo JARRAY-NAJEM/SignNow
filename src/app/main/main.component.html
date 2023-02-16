@@ -1,0 +1,145 @@
+
+      <mat-sidenav-container class="example-container" >
+
+        <mat-sidenav    class="example-sidenav" mode="side" style="max-width: 20%; min-width: 20%;"    opened >
+          <div style="text-align:center ; margin:10px;   ">
+            <a routerLink="">
+            <img src="../../assets/lg.png" alt="" style="width: 75%; height:75%;  "></a>
+            <div style="height: 10px;"></div>
+
+      <div style="text-align: center;">
+
+
+        <button mat-button class="Signer" routerLink="Signer" style="font-family: monospace;">signer</button>
+        <div ><button mat-button class="mes" routerLink="Transactions"  style="font-family: monospace;" > Transactions</button><br><br></div>
+
+      </div>
+           </div>
+           <mat-accordion >
+            <mat-expansion-panel style="width: 100%;background-color: transparent " >
+              <mat-expansion-panel-header style=" height: 45px;background-color:  transparent;">
+                <mat-panel-title  style="  color: #000 "> <mat-icon style="color: #fc0;">person</mat-icon> &nbsp;&nbsp; Profil </mat-panel-title>
+              </mat-expansion-panel-header>
+                <mat-selection-list   [multiple]="false">
+                 <mat-list-option class="hb" routerLink="informations" style=" width: 100%;height: 35px;"  >
+                   <mat-icon mat-list-icon>perm_identity</mat-icon>
+                  Informations
+                 </mat-list-option>
+                 <mat-list-option class="hb" routerLink="Changer Mot de passe" style=" width: 100%;height: 35px" >
+                 <mat-icon mat-list-icon>password</mat-icon>
+                  Mot de Passe
+                 </mat-list-option>
+                 <!-- <mat-list-option class="hb" routerLink="Ma Signature">
+                 <mat-icon mat-list-icon>edit</mat-icon>
+                 Ma Signature
+                 </mat-list-option>
+                 <mat-list-option class="hb" routerLink="Générer Token">
+                   <mat-icon mat-list-icon>token</mat-icon>
+                   Généer Token
+                   </mat-list-option> -->
+
+
+                 </mat-selection-list>
+
+
+               </mat-expansion-panel>
+               <div style="height: 10px;"></div>
+
+
+
+
+
+              <mat-expansion-panel style="width: 100%;background-color: transparent; " >
+             <mat-expansion-panel-header style=" height: 45px;background-color:  transparent;">
+               <mat-panel-title  style=" color: #000 "> <mat-icon style="color: #fc0;">create</mat-icon> &nbsp;&nbsp; portfolio </mat-panel-title>
+             </mat-expansion-panel-header>
+               <mat-selection-list   [multiple]="false">
+
+                 <mat-list-option class="hb" routerLink="Signature" style=" width: 100%;height: 35px;">
+                <mat-icon mat-list-icon>edit</mat-icon>
+                Signature
+                </mat-list-option>
+                <mat-list-option class="hb" routerLink="Générer-Token"style=" width: 100%;height: 35px;">
+                  <mat-icon mat-list-icon>token</mat-icon>
+                  Générer Token
+                  </mat-list-option>
+
+
+                </mat-selection-list>
+
+
+              </mat-expansion-panel>
+              <div style="height: 10px;"></div>
+
+             <mat-expansion-panel class="support" style="background-color:transparent ;" >
+             <mat-expansion-panel-header style=" height: 45px;background-color:  transparent;">
+               <mat-panel-title  style="  color: #000 "> <mat-icon style="color:#fc0 ;">contact_support</mat-icon>&nbsp;&nbsp; Support </mat-panel-title>
+             </mat-expansion-panel-header>
+
+             <mat-selection-list   [multiple]="false">
+
+
+              <mat-list-option class="hb" routerLink="Contacter"  style=" width: 100%; height: 35px;">
+                <mat-icon mat-list-icon>contact_support</mat-icon>
+                Contacter Nous
+              </mat-list-option>
+              <mat-list-option class="hb"routerLink="Acheter" style=" width: 100%;height: 35px;">
+              <mat-icon mat-list-icon>add_shopping_cart</mat-icon>
+              Acheter
+              </mat-list-option>
+
+
+
+
+              </mat-selection-list>
+
+
+
+             </mat-expansion-panel>
+
+           </mat-accordion>
+
+        </mat-sidenav >
+        <mat-sidenav-content  >
+        <div class="example-sidenav-content"       >
+
+
+
+
+
+
+
+<app-toolbar></app-toolbar>
+       <router-outlet></router-outlet>
+
+
+
+
+
+
+
+</div>
+<!--  -->
+
+
+
+
+
+
+
+<!--  -->
+
+
+        </mat-sidenav-content>
+
+
+
+
+
+
+
+
+
+
+       </mat-sidenav-container>
+

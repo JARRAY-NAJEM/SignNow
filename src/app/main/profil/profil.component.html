@@ -1,0 +1,128 @@
+<div style="height: 50px"></div>
+<div>
+  <mat-card style="text-align: center">
+    <form [formGroup]="myFormProfil" class="example-form">
+      <div style="height: 15px"></div>
+
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>Prenom</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="prenom"
+          placeholder="aA zZ 123 @#"
+          [disabled]="click"
+          />
+        <mat-icon matSuffix>person</mat-icon>
+
+        <mat-error *ngIf="myFormProfil.get('prenom').hasError('required')"><b>*
+            required</b></mat-error>
+        <mat-error *ngIf="myFormProfil.get('prenom').hasError">* votre prenom
+          n'est pas <b>valide</b></mat-error>
+      </mat-form-field>
+
+      <div style="height: 10px"></div>
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Nom</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="nom"
+            placeholder="aA zZ 123 @#"
+            [attr.aria-disabled]="click"
+            />
+          <mat-icon matSuffix>person</mat-icon>
+
+          <mat-error *ngIf="myFormProfil.get('nom').hasError('required')"><b>*
+              required</b></mat-error>
+
+          <mat-error *ngIf="myFormProfil.get('nom').hasError">* votre prenom
+            n'est pas <b>valide</b></mat-error>
+        </mat-form-field>
+      </div>
+
+      <div style="height: 10px"></div>
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            formControlName="email"
+            placeholder="email"
+            />
+          <mat-icon matSuffix>mail</mat-icon>
+
+          <mat-error *ngIf="myFormProfil.get('email').hasError('required')"><b>*
+              required</b></mat-error>
+          <mat-error *ngIf="myFormProfil.get('email').hasError('email')">* votre
+            email n'est pas <b>Valide</b></mat-error>
+        </mat-form-field>
+      </div>
+      <div style="height: 10px"></div>
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Numero de Téléphone</mat-label>
+
+          <input
+            type="tel"
+            matInput
+            formControlName="num"
+            placeholder="Ex. pat@example.com"
+            />
+          <mat-icon matSuffix>phone</mat-icon>
+
+          <mat-error *ngIf="myFormProfil.get('num').hasError('required')"><b>*
+              required</b></mat-error>
+          <mat-error *ngIf="myFormProfil.get('num')"><b>* votre numéro n'est pas
+              <b>Valide</b></b></mat-error>
+        </mat-form-field>
+      </div>
+
+      <div style="height: 10px"></div>
+
+      <div>
+        <button
+          mat-button
+          (click)="disableForm()"
+          *ngIf="!click"
+          (click)="click= !click"
+          class="btn-maj"
+          type="button">
+          Mettre à jour</button><br />
+      </div>
+
+      <div style="text-align: center" *ngIf="click">
+        <div class="form-outline">
+          <div fxLayout="row">
+            <button
+              mat-button
+              class="btn-x"
+              fxFlex="40"
+              (click)="disableForm()"
+              (click)="click= !click">
+              cancel
+            </button>
+            <button
+              mat-button
+              class="btn-s"
+              fxFlex="40"
+              (click)="disableForm()"
+              (click)="openSnackBar()"
+              (click)="click= !click">
+              Sauvegarder
+            </button>
+
+            <div class="form-outline"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </mat-card>
+</div>
+
+<div style="height: 50px"></div>

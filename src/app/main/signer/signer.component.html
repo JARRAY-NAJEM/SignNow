@@ -1,0 +1,45 @@
+
+
+
+
+    <div style="height: 50px;" ></div>
+
+    <mat-card>
+      <p style="font-family:monospace ; font-weight: bold;letter-spacing: 2px; font-size: 30px;" >DOCUMENT</p>
+      <div    style=" text-align:center  " >
+
+
+
+    <img src="../../assets/doc.jpg" alt="" width="10%"height="20%" >
+    <p>Sélectionnez le fichier que vous souhaitez signer.</p>
+    <form [formGroup]="add" >
+      <mat-form-field>
+      <ngx-mat-file-input formControlName="doc" accept=".pdf  " matInput  appearance="outline"   >
+         <mat-icon ngxMatFileInputIcon>folder</mat-icon>
+      </ngx-mat-file-input>
+    </mat-form-field>
+
+
+    </form>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    </mat-card>
+
+    <div style="height: 50px;"></div>
+
+
+
+
+
+

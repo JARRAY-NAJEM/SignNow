@@ -1,0 +1,76 @@
+
+<div style="height: 50px;" ></div>
+  <div >
+    <mat-card   >
+      <div   >
+        <div >
+          <div style="height: 30px;"></div>
+  <div style="text-align: center; ">
+<form   [formGroup]="myFormChanger"  >
+    <div class="form-outline  ">
+      <mat-form-field class="example-full-width" appearance="outline" >
+        <mat-label>ancien password</mat-label>
+        <input  [type]="hidex ? 'password' : 'text'" matInput formControlName="ancien" placeholder="aA zZ 123 @#" minlength="8" style="background-color: transparent;">
+        <button mat-icon-button matSuffix (click)="hidex = !hidex" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidex">
+          <mat-icon>{{hidex ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="myFormChanger.get('ancien').hasError('required')"><b>required</b> </mat-error>
+       <mat-error *ngIf="myFormChanger.get('ancien').hasError('minlength')"  >Please enter :<br>
+        Au moins 8 caractères
+         Lettres minuscules / Lettres majuscules /
+           Numéros / Caractères spéciaux
+       </mat-error>
+      </mat-form-field>
+           <div style="height: 15px;"></div>
+    </div>
+    <div class="form-outline  ">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>nouveau password</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput formControlName="nouveau" placeholder="aA zZ 123 @#" minlength="8">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="myFormChanger.get('nouveau').hasError('required')"><b>* required</b> </mat-error>
+        <mat-error *ngIf="myFormChanger.get('nouveau').hasError('minlength')">Please enter :<br>
+          Au moins 8 caractères
+          Lettres minuscules / Lettres majuscules /
+            Numéros / Caractères spéciaux
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div style="height: 15px;"></div>
+    <div class="form-outline  ">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <mat-label>confirmer password</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput formControlName="confirmer" placeholder="aA zZ 123 @#" minlength="8">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        </button>
+        <mat-error *ngIf="myFormChanger.get('confirmer').hasError('required')"><b>required</b> </mat-error>
+        <mat-error *ngIf="myFormChanger.get('confirmer').hasError('minlength')">Please enter :<br>
+          Au moins 8 caractères
+          Lettres minuscules / Lettres majuscules /
+            Numéros / Caractères spéciaux
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div style="height: 15px;"></div>
+    <button mat-button [disabled]="myFormChanger.invalid"  class="btn-Changer"
+     style="
+           width: 95%;
+          background-color: #fc0;
+          border-radius: 5px;
+          text-align: center;
+          font-family: monospace;
+          font-weight: bold;
+          border-color: transparent;
+          padding: 5px;
+          font-size: 20px;
+          transition-duration: 0.2s;
+         padding-bottom: -10px;"
+     >Confirmer</button><br>
+  </form>
+  </div>
+        </div>
+      </div>
+    </mat-card>
+

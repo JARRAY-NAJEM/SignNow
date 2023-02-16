@@ -1,0 +1,319 @@
+<div>
+  <div fxFlex="25"></div>
+
+  <div style="height: 100%; text-align: center" fxFlex="50">
+    <img src="../../assets/lg.png" alt="" width="30%" />
+
+    <form [formGroup]="myFormSign" class="example-form">
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>prenom</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="firstname"
+            placeholder="Ex. pat@example.com"
+          />
+          <mat-icon matSuffix>person</mat-icon>
+
+          <!-- <mat-error *ngIf="myFormSign.get('prenom').hasError">prenom n'est pas <strong>Valide</strong></mat-error> -->
+          <!-- <mat-error *ngIf="myFormSign.get('prenom').hasError">prenom n'est pas <strong>Valide</strong></mat-error> -->
+        </mat-form-field>
+      </div>
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>nom</mat-label>
+          <input
+            type="text"
+            matInput
+            formControlName="lastname"
+            placeholder="aA
+            zZ 123 @#"
+          />
+          <mat-icon matSuffix>person</mat-icon>
+          <!--  -->
+          <!-- <mat-error *ngIf="myFormSign.get('nom').hasError"> nom n'est pas <strong>Valide</strong></mat-error> -->
+          <!-- <mat-error *ngIf="myFormSign.get('nom').hasError"> nom n'est pas <strong>Valide</strong></mat-error> -->
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="form-outline" fxFlex="50">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              type="email"
+              matInput
+              formControlName="Email"
+              placeholder="email"
+            />
+            <mat-icon matSuffix>mail</mat-icon>
+
+            <!-- <mat-error *ngIf="myFormSign.get('email').hasError('required')"></mat-error> -->
+            <!-- <mat-error *ngIf="myFormSign.get('email').hasError('email')">* votre Email n'est pas <b>valide</b></mat-error> -->
+            <mat-error *ngIf="myFormSign.get('Email').hasError('required')"
+              ><b>* required</b></mat-error
+            >
+            <!-- <mat-error *ngIf="myFormSign.get('Email').hasError('email')">* votre Email n'est pas <b>valide</b></mat-error> -->
+          </mat-form-field>
+        </div>
+        <div class="form-outline" fxFlex="50">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>identite</mat-label>
+            <input
+              type="text"
+              matInput
+              formControlName="identite"
+              placeholder="Numéro d'identite"
+            />
+            <mat-icon matSuffix>mail</mat-icon>
+
+            <mat-error *ngIf="myFormSign.get('identite').hasError('required')"
+              ><b>* required</b></mat-error
+            >
+            <!-- <mat-error *ngIf="myFormSign.get('identite').hasError()">* votre Email n'est pas <b>valide</b></mat-error> -->
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="form-outline">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>numero de telephone</mat-label>
+
+          <input
+            type="tel"
+            matInput
+            formControlName="num"
+            placeholder="22 222
+            222"
+          />
+          <mat-icon matSuffix>phone</mat-icon>
+
+          <mat-error *ngIf="myFormSign.get('num').hasError"
+            >numero n'est pas <strong>Valide</strong></mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div fxLayout="Row" fxLayoutAlign="space-between center">
+        <div class="form-outline" fxFlex="50">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>mot de pass</mat-label>
+            <input
+              [type]="hide ? 'password' : 'text'"
+              matInput
+              formControlName="password"
+              placeholder="aA zZ 123 @#"
+              minlength="8"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+
+            <mat-error *ngIf="myFormSign.get('password').hasError">
+              Please enter : Au moins 8 caractères / Lettres minuscules -
+              majuscules / Numéros / Caractères spéciaux
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div style="height: 15px"></div>
+
+        <div class="form-outline" fxFlex="50">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>confirmer mot de pass</mat-label>
+            <input
+              matInput
+              formControlName="confirmer"
+              placeholder="aA zZ 123
+              @#"
+              minlength="8"
+            />
+
+            <button mat-icon-button matSuffix>
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+
+            <mat-error *ngIf="myFormSign.get('confirmer').hasError"
+              ><b> * Mot de pass n'est correct</b></mat-error
+            >
+          </mat-form-field>
+        </div>
+      </div>
+      <div style="height: 25px"></div>
+
+      <div>
+        <button
+          mat-raised-button
+          (click)="post()"
+          type="button"
+          class="btn-log"
+        >
+          Sign Up</button
+        ><br />
+        <br />
+        <button
+          mat-button
+          routerLink="/authentification/login"
+          type="button"
+          class="btn-log"
+        >
+          annuler</button
+        ><br />
+      </div>
+    </form>
+  </div>
+
+  <div fxFlex="25" style="background-color: #fff">
+    <!--<div class="container">
+      <div class="span-container">
+        <span class="one"></span>
+        <span class="two"></span>
+        <span class="three"></span>
+        <span class="four"></span>
+      </div>
+    </div> -->
+    <style>
+      .example-full-width {
+        border-color: red;
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 100%;
+      }
+      input {
+        border-color: red;
+        color: accent;
+      }
+
+      .container {
+        width: 100%;
+        height: 70vh;
+        position: relative;
+      }
+
+      .span-container {
+        width: 100px;
+        height: 100px;
+        transform: translate(-50% -50%);
+        position: absolute;
+        top: 42%;
+        left: 45%;
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        border-radius: 50%;
+        animation: speed 2s infinite ease-in-out;
+      }
+
+      .one {
+        background: #c9ba12;
+        animation-delay: 1.5s;
+      }
+
+      .two {
+        background: #a11cc7;
+        animation-delay: 1s;
+      }
+
+      .three {
+        background: #237ead;
+        animation-delay: 0.5s;
+      }
+
+      .four {
+        background: #e0bcbc;
+      }
+
+      @keyframes speed {
+        0% {
+          transform: translate(0%);
+          border-radius: 50%;
+        }
+
+        25% {
+          transform: translate(150%) scale(0.5);
+          border-radius: 0%;
+        }
+
+        50% {
+          transform: translate(150%, 150%);
+          border-radius: 50%;
+        }
+
+        75% {
+          transform: translate(0, 150%) scale(0.5);
+          border-radius: 0%;
+        }
+      }
+    </style>
+
+    <div>
+      <!-- <div class="bar"  >
+        <div class="ball"></div>
+      </div> -->
+      <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+        .ball {
+          position: relative;
+          bottom: 100px;
+          left: calc(100% - 70px);
+          width: 100px;
+          height: 100px;
+          background: #fc0;
+          border-radius: 50%;
+          animation: ball-move 4s ease-in-out 2s infinite alternate;
+        }
+        .ball::after {
+          position: absolute;
+          content: "";
+          top: 50px;
+          right: 10px;
+          width: 10px;
+          height: 10px;
+          background: #000000;
+          border-radius: 50%;
+        }
+        .bar {
+          width: 500px;
+          height: 25px;
+          background: #000000;
+          border-radius: 30px;
+          transform: rotate(-15deg);
+          filter: drop-shadow(20px 10px 4px gray);
+          animation: up-down 4s ease-in-out 2s infinite alternate;
+        }
+        @keyframes up-down {
+          from {
+            transform: rotate(-15deg);
+          }
+          to {
+            transform: rotate(15deg);
+          }
+        }
+        @keyframes ball-move {
+          from {
+            left: calc(100% - 70px);
+            transform: rotate(360deg);
+          }
+          to {
+            left: calc(0% - 35px);
+            transform: rotate(0deg);
+          }
+        }
+      </style>
+    </div>
+  </div>
+</div>
+
+<div style="height: 50px"></div>

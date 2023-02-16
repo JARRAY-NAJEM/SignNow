@@ -1,0 +1,32 @@
+
+
+         .mapouter{
+          position:relative;
+          text-align:right;
+          width:100%;
+        }
+        .gmap_canvas {
+          text-align: center;
+          overflow:hidden;
+          background:transparent;
+          width: 100%;
+        }
+        .btn-support{
+          width: 100%;
+          background: #fc0;
+          color: rgb(255, 255, 255);
+          outline: none;
+          border-radius: 5px;
+          text-align: center;
+          font-family: monospace;
+          font-weight: bold;
+          font-size: 20px;
+          padding-bottom: -10px;
+          transition-duration: 0.2s;
+          cursor: pointer;
+         }
+
+
+
+
+

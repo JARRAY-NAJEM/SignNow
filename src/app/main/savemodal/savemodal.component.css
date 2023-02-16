@@ -1,0 +1,19 @@
+
+.btn{
+  background: rgb(22, 137, 30);
+  color:  rgb(255, 255, 255);
+  outline: none;
+  border-radius: 1px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-top: 5%;
+  width: 100%;
+
+}
+*{
+  font-family: monospace;
+}

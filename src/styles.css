@@ -1,1 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+
+ .example-full-width{
+  font-family: monospace;
+ }
+
+body {
+background-color:rgb(255, 255, 255);
+
+
+  }
+  /* *{
+    font-family: cursive;
+  } */
+  /* mat-Icon{
+color: #de9400;
+  } */
+
+
+
+
+
+.example-full-width{
+  width: 99%;
+}
+
+
+
+      .full-width {
+        width: 99%;
+      }
+
+
+
+
+
+          @media only screen and (max-width:5500px){
+          mat-card {
+            width: 97% ; margin-left: 2%;margin-top: 2%;
+
+          }}
+          @media only screen and (max-width:499px){
+          mat-card {
+
+            width:97% ; margin-left: 2%;margin-top: 2%;} }
+            @media only screen and (max-width:2880px){
+              mat-card  {
+                width: 97% ; margin-left: 2%;margin-top: 2%;
+
+              }}
+
+
+
+          @media only screen and (max-width:2750px){
+            mat-card  {
+              width: 97% ;
+              margin-left: 1%;margin-top: .5%;
+            }}
+          @media only screen and (max-width:2050px){
+          mat-card {
+            width:97% ; margin-left: 2%;margin-top: 2%;
+
+          }}
+          @media only screen and (max-width:1830px){
+          mat-card {
+            width:97% ; margin-left: 2%;margin-top: 2%;
+
+
+          }}
+          @media only screen and (max-width:1710px){
+          mat-card {
+            width:97% ; margin-left: 2%;margin-top: 2%;
+
+
+          }}
+          @media only screen and (max-width:1520px){
+          mat-card {
+            width:97% ; margin-left: 2%;margin-top: 2%;
+
+          }}
+          @media only screen and (max-width:1370px){
+
+
+          mat-card {
+            width:97% ; margin-left: 2%;margin-top: 2%;
+
+
+          }}
+          @media only screen and (max-width:1250px){
+          mat-card {
+            width:97% ; margin-left: 2%;margin-top: 2%;
+
+          }}
+          @media only screen and (max-width:1095px){
+            mat-card {
+              width:97% ; margin-left: 2%;margin-top: 2%;
+
+            }}
+          @media only screen and (max-width:915px){
+              mat-card {
+                width:97% ; margin-left: 2%;margin-top: 2%;
+
+              }}
+          @media only screen and (max-width:785px){
+                mat-card {
+                  width:97% ; margin-left: 2%;margin-top: 2%;
+;
+                }}
+          @media only screen and (max-width:685px){
+                  mat-card {
+                    width:97% ; margin-left: 2%;margin-top: 2%;
+
+                  }}
+          @media only screen and (max-width:640){
+                    mat-card {
+                      width:97% ; margin-left: 2%;margin-top: 2%;
+
+                    }}
+                    @media only screen and (max-width:480){
+                      mat-card {
+                        width:97% ; margin-left: 2%;margin-top: 2%;
+
+                      }}
+
+
+
+
+
+
+
+

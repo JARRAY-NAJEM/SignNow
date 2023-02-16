@@ -1,0 +1,118 @@
+
+
+.signature-container {
+
+  border-radius: 15px;
+  cursor: crosshair;
+
+
+
+
+
+
+
+}
+
+.buttons {
+
+  padding-top: 25px;
+  margin-right: 25px;
+
+}
+
+.btn{
+  width: 100%;
+  background: #fc0;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: -10px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+
+ }
+
+ .signature-image{
+
+  box-sizing: 20px;
+  color: #fc0;
+  background-color: rgb(152, 142, 102);
+  border: #fc0, solid,5px;
+
+ }
+
+
+ .btn-maj{
+
+  background: #fc0;
+  color: #000000;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-top: 5%;
+  width: 60%;
+
+
+ }
+ .btn-maj:hover{
+  color: #fff;
+ }
+.btn-effacer{
+    background: rgb(238, 71, 15);
+  color: rgb(0, 0, 0);
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-top: 5%;
+  width: 50%;
+
+}
+.btn-cancel{
+    background: gray;
+  color:  #fc0;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-top: 1%;
+  width: 100%;
+  margin-left: 5%;
+
+}
+.btn-save{
+    background: #fc0;
+  color: rgb(0, 0, 0);
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  margin-top: 1%;
+  width: 100%;
+  margin-left: 10%;
+
+
+}
+
+

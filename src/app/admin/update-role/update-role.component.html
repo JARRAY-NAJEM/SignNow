@@ -1,0 +1,29 @@
+
+
+
+<mat-dialog-content fxLayout="column" fxLayoutAlign="center center" >
+
+
+<form [formGroup]="myFormRole"   >
+
+<mat-form-field appearance="outline">
+  <mat-label>Role</mat-label>
+  <input matInput placeholder="role" formControlName="role">
+  <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+  <mat-error *ngIf="myFormRole.get('role').hasError('required')">* required</mat-error>
+  <mat-error *ngIf="myFormRole.get('role').hasError('minlength')">*uppercase </mat-error>
+
+
+</mat-form-field>
+
+
+
+
+  </form>
+
+
+</mat-dialog-content>
+ <mat-dialog-actions align="end">
+  <button mat-button  (click)="close()" mat-raised-button color="warn">Cancel</button>
+  <button mat-button   (click)="confirmer()"  style="background-color:green ;color:#fff ;"   mat-raised-button >valider</button>
+</mat-dialog-actions>
